@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="data1">
+        <item>空腹</item>
+        <item>餐后1小时</item>
+        <item>餐后2小时</item>
+        <item>餐后3小时</item>
+    </string-array>
+    <color name="text">#000000</color>
+</resources>

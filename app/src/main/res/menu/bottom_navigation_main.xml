@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_message"
+        android:enabled="true"
+        android:icon="@drawable/datacenter"
+        android:title="数据"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_work"
+        android:enabled="true"
+        android:icon="@drawable/myinfo"
+        android:title="报告"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_my"
+        android:enabled="true"
+        android:title="我的"
+        android:icon="@drawable/personal"
+        app:showAsAction="ifRoom" />
+
+</menu>

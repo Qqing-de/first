@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll"
+        android:orientation="vertical">
+        <!--    个人中心头像-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/h_back"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <ImageView
+                android:id="@+id/h_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/head" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/h_back"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/user_line"
+                    android:layout_width="1dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#fbfcfd"/>
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/user_line"
+                    android:text="**0"
+                    android:textColor="#3c3f41"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/user_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="17sp"
+                    android:textColor="#3c3f41"
+                    android:layout_toRightOf="@id/user_line"
+                    android:text="100****000"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--智能硬件的折叠框-->
+        <TextView
+            android:id="@+id/open_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="智能硬件"
+            android:drawableLeft="@drawable/logo1"
+            android:textSize="20dp"
+            android:background="@drawable/translucent_edit"
+            android:drawableRight="@drawable/bottom"
+            android:drawablePadding="20dp"
+            android:gravity="left" />
+        <!--要是不写这个LinearLayout布局，平移效果将会在父窗体进行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+            <LinearLayout
+                android:id="@+id/linearlayout_id"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Icon"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="@drawable/translucent_edit"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="胰岛素笔"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="@drawable/translucent_edit"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/translucent_edit"
+                    android:gravity="center"
+                    android:text="动态血糖仪"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--折叠框 数据分析-->
+        <TextView
+            android:id="@+id/open1_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="数据分析"
+            android:drawableLeft="@drawable/message"
+            android:textSize="20dp"
+            android:background="@drawable/translucent_edit"
+            android:drawableRight="@drawable/bottom"
+            android:drawablePadding="20dp"
+            android:gravity="left" />
+        <!--要是不写这个LinearLayout布局，平移效果将会在父窗体进行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+            <LinearLayout
+                android:id="@+id/linearlayout_id1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="饮食分析"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="@drawable/translucent_edit"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="血糖分析"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="@drawable/translucent_edit"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/translucent_edit"
+                    android:gravity="center"
+                    android:text="运动分析"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--    个人信息-->
+        <!--设置-->
+        <TextView
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/translucent_edit"
+            android:drawableStart="@drawable/ic_sign_name"
+            android:drawableEnd="@drawable/right"
+            android:drawablePadding="20dp"
+            android:focusableInTouchMode="true"
+            android:gravity="left"
+            android:text="个人信息"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/translucent_edit"
+            android:drawableLeft="@drawable/manager"
+            android:drawableRight="@drawable/right"
+            android:drawablePadding="20dp"
+            android:gravity="left"
+            android:text="设置"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="反馈"
+            android:drawableLeft="@drawable/message"
+            android:drawableRight="@drawable/right"
+            android:textSize="20dp"
+            android:background="@drawable/translucent_edit"
+            android:drawablePadding="20dp"
+            android:gravity="left" />
+        <!--退出登录-->
+        <Button
+            android:id="@+id/Quitbutton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/translucent_edit"
+            android:textSize="20dp"
+            android:text="退出登录"
+            android:textColor="#000000">
+
+        </Button>
+    </LinearLayout>
+
+</ScrollView>

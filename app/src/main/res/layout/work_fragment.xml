@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Work_Fragment"
+    android:background="@drawable/shape">
+<!--下拉选择框spinner-->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="测量血糖时为："
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="#9F9F9F"
+            android:background="@drawable/bg_yellow"
+            android:textSize="20sp" />
+        <Spinner
+            android:id="@+id/spinner_rank"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_green"
+            android:entries="@array/data1"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_find"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_go"
+        android:src="@drawable/more"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-450dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800px"
+            android:layout_marginTop="25px"
+            android:layout_centerInParent="true"
+            android:paddingLeft="-25dp"
+            android:paddingTop="32dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            >
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/celiang"
+                android:layout_marginTop="10dp"
+                android:minWidth="450dp"
+                android:layout_width="match_parent"
+                android:layout_height="240dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
