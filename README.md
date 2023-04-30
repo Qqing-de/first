@@ -1,2 +1,3 @@
 # first
-null
+Andriod
+Blood glucose measuring App
